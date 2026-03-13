@@ -1,2 +1,0 @@
-# heavenetworkwifi
-Telecomunicaciones hostpot
