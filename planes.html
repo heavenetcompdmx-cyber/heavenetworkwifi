@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Comprar Plan</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0f2027;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.plan{
+background:#203a43;
+padding:20px;
+margin:20px;
+border-radius:10px;
+}
+
+button{
+padding:15px;
+border:none;
+border-radius:8px;
+background:#00e5ff;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Comprar Internet HEAVENET</h1>
+
+<div class="plan">
+<h2>1 Día</h2>
+<p>$20 MXN</p>
+<button onclick="comprar('1 dia')">Comprar</button>
+</div>
+
+<div class="plan">
+<h2>7 Días</h2>
+<p>$60 MXN</p>
+<button onclick="comprar('7 dias')">Comprar</button>
+</div>
+
+<div class="plan">
+<h2>1 Mes</h2>
+<p>$100 MXN</p>
+<button onclick="comprar('1 mes')">Comprar</button>
+</div>
+
+<script>
+
+function comprar(plan){
+
+let telefono = "525562418514";
+
+let mensaje = "Hola quiero comprar el plan HEAVENET WIFI: " + plan;
+
+let url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+
+window.location.href = url;
+
+}
+
+</script>
+
+</body>
+</html>
