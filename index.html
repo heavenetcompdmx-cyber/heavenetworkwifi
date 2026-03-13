@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>HEAVENET WIFI</title>
 
 <style>
@@ -16,66 +18,72 @@ margin:0;
 padding:0;
 }
 
-header{
-padding:40px;
-font-size:32px;
-font-weight:bold;
-background:#00000055;
-}
-
-.sub{
-font-size:16px;
-opacity:0.9;
-}
-
 .container{
+margin-top:80px;
 padding:20px;
 }
 
-.plan{
-background:#ffffff10;
-margin:20px auto;
-padding:25px;
-max-width:320px;
+.logo{
+font-size:32px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.subtitle{
+opacity:0.8;
+margin-bottom:30px;
+}
+
+.box{
+background:rgba(255,255,255,0.08);
+padding:30px;
 border-radius:15px;
+max-width:350px;
+margin:auto;
 backdrop-filter: blur(10px);
-box-shadow:0 0 15px rgba(0,0,0,0.3);
 }
 
-.plan h2{
-margin-top:0;
-font-size:24px;
-}
-
-.price{
-font-size:28px;
-margin:10px 0;
-color:#00e5ff;
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:8px;
+border:none;
+font-size:16px;
 }
 
 button{
-background:#00e5ff;
-border:none;
-padding:15px;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
 width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
 }
 
-button:hover{
-background:#00bcd4;
+.login{
+background:#00e5ff;
 }
 
-.whatsapp{
+.buy{
 background:#25D366;
-margin-top:25px;
 }
 
-.footer{
-margin-top:40px;
-font-size:14px;
-opacity:0.8;
+.planbox{
+margin-top:30px;
+}
+
+.plan{
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:12px;
+margin-top:15px;
+}
+
+.price{
+font-size:22px;
+color:#00e5ff;
 }
 
 </style>
@@ -84,66 +92,53 @@ opacity:0.8;
 
 <body>
 
-<header>
-
-HEAVENET WIFI 🚀
-
-<div class="sub">
-Internet comunitario rápido y accesible
-</div>
-
-</header>
-
 <div class="container">
 
-<div class="plan">
-<h2>1 Día</h2>
-<div class="price">$20 MXN</div>
-<p>Acceso por 24 horas</p>
-<button onclick="comprar('1 Dia')">Comprar</button>
+<div class="logo">
+HEAVENET WIFI 🚀
 </div>
 
-<div class="plan">
-<h2>7 Días</h2>
-<div class="price">$60 MXN</div>
-<p>Acceso por una semana</p>
-<button onclick="comprar('7 Dias')">Comprar</button>
+<div class="subtitle">
+Internet comunitario rápido
 </div>
 
-<div class="plan">
-<h2>1 Mes</h2>
-<div class="price">$100 MXN</div>
-<p>Promoción apertura de zona</p>
-<p>Después de 6 meses: $200 MXN</p>
-<p>Incluye plataformas de streaming 📺</p>
-<button onclick="comprar('1 Mes')">Comprar</button>
-</div>
+<div class="box">
 
-<button class="whatsapp" onclick="window.location.href='https://wa.me/525562418514?text=Hola%20quiero%20comprar%20internet%20HEAVENET'">
-Comprar por WhatsApp
+<input type="text" placeholder="Ingresa tu clave o voucher">
+
+<button class="login">
+Acceder con clave
+</button>
+
+<button class="buy" onclick="window.location.href='https://heavenetwork.github.io/heavennetwork-wifi/planes.html'">
+Comprar plan
 </button>
 
 </div>
 
-<div class="footer">
-HEAVENET NETWORK © 2026
+<div class="planbox">
+
+<div class="plan">
+<h3>1 Día</h3>
+<div class="price">$20 MXN</div>
 </div>
 
-<script>
+<div class="plan">
+<h3>7 Días</h3>
+<div class="price">$60 MXN</div>
+</div>
 
-function comprar(plan){
+<div class="plan">
+<h3>1 Mes</h3>
+<div class="price">$100 MXN</div>
+<p>Promoción apertura de zona</p>
+<p>Después de 6 meses: $200 MXN</p>
+<p>Incluye plataformas de streaming 📺</p>
+</div>
 
-let telefono = "525562418514";
+</div>
 
-let mensaje = "Hola quiero comprar el plan HEAVENET WIFI: " + plan;
-
-let url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
-
-window.location.href = url;
-
-}
-
-</script>
+</div>
 
 </body>
 </html>
